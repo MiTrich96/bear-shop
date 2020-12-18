@@ -11,12 +11,27 @@ class Item extends Component {
         this.toggleCart = this.toggleCart.bind(this);
     }
 
+    componentDidMount() {
+        let isExists = this.props.cart.filter((item) => item.id === this.props.wine.id);
+        if (isExists.length !== 0) {
+            const basketBlock = document.getElementsByClassName('cheker');
+            [...basketBlock].map(block => {
+                console.log(block,'+',block.dataset);
+                if (+block.dataset.id === this.props.wine.id) {
+                    block.setAttribute('checked', 'checked');
+                } 
+            })
+        }
+    }
+
     toggleCart() {
         let isExists = this.props.cart.filter((item) => item.id === this.props.wine.id);
         if (isExists.length === 0) {
             this.props.addToCart(this.props.wine);
         }
-        else this.props.removeFromCart(this.props.wine);
+        else {
+            this.props.removeFromCart(this.props.wine);
+        }
     }
 
     render() {
@@ -29,7 +44,7 @@ class Item extends Component {
             <div className="item_ph">ph: {this.props.wine.ph}%</div>
             <div className="item_date">date: {this.props.wine.first_brewed}</div>
             <div className="item_volume">volume: {this.props.wine.volume.value}l</div>
-            <div className="basket_add">add to basket <input  
+            <div className="basket_add">add to basket <input className="cheker" data-id={this.props.wine.id} 
             onClick={this.toggleCart} 
             type="checkbox"/></div>
         </li>
