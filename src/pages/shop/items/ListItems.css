@@ -1,0 +1,10 @@
+.items_inner {
+    width: 1000px;
+}
+
+.list_items {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}

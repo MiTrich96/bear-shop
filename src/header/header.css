@@ -1,0 +1,72 @@
+.navbar_wrap {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(63, 50, 68);
+    color: rgb(191, 195, 186);
+    padding: 0 100px;
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.navbar_search {
+    padding: 20px 0;
+}
+
+#input_search {
+    outline: none;
+    border: transparent;
+    background-color: rgb(169, 172, 169);
+    color: rgb(47, 34, 53);
+    width: 400px;
+    height: 40px;
+    font-size: 32px;
+}
+
+.navbar_basket {
+    margin-left: 300px;
+    width: 50px;
+    padding: 20px 0;
+}
+
+.basket_image {
+    width: 50px;
+    height: 40px;
+}
+
+.navbar_authorize {
+    width: 200px;
+}
+
+.not_authorized {
+    padding: 20px 0;
+}
+
+.authorized {
+    width: 200px;
+    padding: 10px 0;
+    display: none;
+}
+
+.user {
+    width: 100px;
+    display: inline-block;
+}
+
+.user_image_img {
+    width: 40px;
+    height: 40px;
+}
+
+.log_out {
+    vertical-align: top;
+    margin-top: 10px;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+    z-index: 10000;
+}

@@ -1,0 +1,10 @@
+.pagination_wrap {
+    padding: 0 40%;
+    margin: 10px 0;
+}
+
+.pagination_menu {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+}

@@ -1,0 +1,11 @@
+.link_home {
+    margin: 10px;
+    font-size: 32px;
+}
+
+.basket_wrap {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 10%;
+}

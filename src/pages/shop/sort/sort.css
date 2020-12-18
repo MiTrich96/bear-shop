@@ -1,0 +1,41 @@
+.items_sort {
+    width: 300px;
+    padding: 20px;
+    color: rgb(169, 172, 169);
+    background-color: rgb(96, 73, 90);
+    height: 100%;
+}
+
+.sort_title {
+    font-size: 20px;
+}
+
+.sort_block {
+    margin: 10px 0;
+}
+
+.title {
+    padding-left: 10px;
+}
+
+.sort_wrap {
+    display: inline-flex;
+    justify-content: space-between;
+}
+
+.input_to, .input_from {
+    width: 100px;
+    outline: none;
+}
+
+.label_to, .label_from {
+    margin: 0 5px;
+}
+
+.submit_form {
+    width: 100%;
+}
+
+.more {
+    width: 100%;
+}

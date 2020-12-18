@@ -1,0 +1,29 @@
+.pagination_item {
+    list-style-type: none;
+}
+
+.pagination_button {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    border: 1px solid rgb(63, 50, 68);
+    background-color: rgb(169, 172, 169);
+    transition: .2s ease-in;
+    outline: none;
+}
+
+
+.pagination_button:hover {
+    border: 1px solid rgb(63, 50, 68);
+    background-color: rgb(47, 34, 53);
+    color: rgb(169, 172, 169);
+}
+
+.active_pagination {
+
+    color: rgb(169, 172, 169);
+    background-color: rgb(47, 34, 53);
+    border: 5px solid rgb(63, 50, 68);
+}
