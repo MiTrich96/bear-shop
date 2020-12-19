@@ -1,6 +1,7 @@
 import { remove } from 'ramda';
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import { NavLink } from 'react-router-dom';
 import {addToCart, removeFromCart} from './../../../../actions/cartAction';
 import './Item.css';
 
@@ -38,7 +39,7 @@ class Item extends Component {
 
         return (
             <li className="item">
-            <div className="item_image"><img className="item_image_img" src={this.props.wine.image_url} alt=""/></div>
+            <div className="item_image"><NavLink to={`/item/${this.props.wine.id}`}><img className="item_image_img" src={this.props.wine.image_url} alt=""/></NavLink></div>
             <div className="item_title">{this.props.wine.name}</div>
             <div className="item_temp">temperature: {this.props.wine.method.fermentation.temp.value}%</div>
             <div className="item_ph">ph: {this.props.wine.ph}%</div>

@@ -1,0 +1,21 @@
+.item_wrap {
+
+}
+
+.display_wrap {
+    display: inline-flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-right: 60%;
+    font-size: 32px;
+}
+
+.home_link {
+    margin: 10px;
+    font-size: 20px;
+}
+
+.item_image,.item_image_img {
+    width: 300px;
+    height: 600px;
+}

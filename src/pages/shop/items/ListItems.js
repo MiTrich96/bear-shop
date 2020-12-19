@@ -2,13 +2,14 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import './ListItems.css';
 import Item from './item/Item';
+import {changeCountPages} from './../../../actions/getElementsAction';
 
 class ListItems extends Component {
 
     render() {
         return (
             <div className="items_inner">
-                <ul className="list_items"> 
+                <ul className="list_items">
                     {this.props.wines.map((wine, index) => <Item wine={wine} key={index}/>)}
                 </ul>
             </div>
@@ -26,5 +27,8 @@ const mapStateToProps = ({wines, filter}) => ({
             })
   })
   
+const mapDispatchToProps = (dispatch) => ({
+    changeCountPages: count => dispatch(changeCountPages(count))
+});
 
-export default connect(mapStateToProps)(ListItems);
+export default connect(mapStateToProps, mapDispatchToProps)(ListItems);

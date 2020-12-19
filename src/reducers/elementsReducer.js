@@ -1,8 +1,9 @@
-import {FETCH_WINE_SUCCESS,SET_CURRENT_PAGE} from './../constans/elementsConstantAction';
+import {FETCH_WINE_SUCCESS,SET_CURRENT_PAGE,CHANGE_COUNT_PAGES} from './../constans/elementsConstantAction';
 
 const initialState = {
     items: [],
     currentPage: 1,
+    countPages: 4,
     perPage:6
 }
 
@@ -17,6 +18,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         currentPage: action.payload
+      }
+    case CHANGE_COUNT_PAGES:
+      return {
+        ...state,
+        countPages: action.payload
       }
     default:
       return state;

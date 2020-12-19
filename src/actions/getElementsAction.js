@@ -1,6 +1,7 @@
 import {
     FETCH_WINE_SUCCESS,
-    SET_CURRENT_PAGE
+    SET_CURRENT_PAGE,
+    CHANGE_COUNT_PAGES
 } from './../constans/elementsConstantAction';
 
 export function winesFetchDataSuccess(wines) {
@@ -24,5 +25,7 @@ export function winesFetchData(url) {
             .catch(()=>{});
     }
 }
+
+export const changeCountPages = (count) => ({type: CHANGE_COUNT_PAGES, payload: count})
 
 export const setCurrentPage = (page) => ({type:SET_CURRENT_PAGE, payload:page})
